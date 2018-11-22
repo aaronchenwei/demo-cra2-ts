@@ -1,0 +1,6 @@
+{
+  "extends": ["@aaronchenwei/tslint-config", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["craco.config.js", "node_modules/**/*.ts"]
+  }
+}
