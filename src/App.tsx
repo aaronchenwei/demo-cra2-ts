@@ -1,11 +1,29 @@
 import { Button } from 'antd';
 import React, { Component } from 'react';
+import { observable } from 'mobx';
+import { observer } from 'mobx-react';
 
 import logo from './logo.svg';
 
 import './App.css';
 
+@observer
 class App extends Component {
+  @observable
+  private now: Date = new Date();
+  private interval?: number;
+
+  componentDidMount() {
+    const that = this;
+    this.interval = window.setInterval(() => {
+      that.now = new Date();
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.interval);
+  }
+
   render() {
     return (
       <div className="App">
@@ -23,7 +41,10 @@ class App extends Component {
             Learn React
           </a>
         </header>
-        <Button>Ant Design</Button>
+        <div>
+          <Button>Ant Design</Button>
+        </div>
+        <div>{this.now.toString()}</div>
       </div>
     );
   }
