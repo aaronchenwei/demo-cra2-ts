@@ -1,4 +1,4 @@
-import { Button } from 'antd';
+import { Button, message } from 'antd';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
 import React, { Component } from 'react';
@@ -23,6 +23,10 @@ class App extends Component {
     window.clearInterval(this.interval);
   }
 
+  onClickButton: React.MouseEventHandler<HTMLButtonElement> = event => {
+    message.info('This is a normal message');
+  };
+
   render() {
     return (
       <div className="App">
@@ -41,7 +45,9 @@ class App extends Component {
           </a>
         </header>
         <div>
-          <Button>Ant Design</Button>
+          <Button type="primary" onClick={this.onClickButton}>
+            Ant Design
+          </Button>
         </div>
         <div>{this.now.toString()}</div>
       </div>
