@@ -1,7 +1,7 @@
 import { Button } from 'antd';
-import React, { Component } from 'react';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
+import React, { Component } from 'react';
 
 import logo from './logo.svg';
 
@@ -14,9 +14,8 @@ class App extends Component {
   private interval?: number;
 
   componentDidMount() {
-    const that = this;
     this.interval = window.setInterval(() => {
-      that.now = new Date();
+      this.now = new Date();
     }, 1000);
   }
 
