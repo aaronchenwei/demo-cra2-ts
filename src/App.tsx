@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   onClickButton: React.MouseEventHandler<HTMLButtonElement> = event => {
+    event.preventDefault();
     message.info('This is a normal message');
   };
 
