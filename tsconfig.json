@@ -15,8 +15,7 @@
     "jsx": "preserve",
     "lib": ["es6", "dom"],
     "experimentalDecorators": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedLocals": true
   },
   "include": ["src"]
 }
