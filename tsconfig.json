@@ -17,5 +17,6 @@
     "experimentalDecorators": true,
     "noUnusedLocals": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["build", "node_modules", "public"]
 }
