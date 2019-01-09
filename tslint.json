@@ -1,0 +1,6 @@
+{
+  "extends": ["@aaronchenwei/tslint-config", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["build", "node_modules", "public", "src/serviceWorker.ts"]
+  }
+}
